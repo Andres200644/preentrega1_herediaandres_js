@@ -1,17 +1,27 @@
 //algoritmo con condicional y con ciclo 
-function iniciarSesion(nombreUsuario, contrasena) {
-    let nombreUsuarioCorrecto = "usuario";
-    let contrasenaCorrecta = "contrasena";
+let nombreUsuarioRegistrado;
+let contrasenaRegistrada;
 
-    while (nombreUsuario !== nombreUsuarioCorrecto || contrasena !== contrasenaCorrecta) {
+function registrarUsuario() {
+    nombreUsuarioRegistrado = prompt("Registra tu nombre de usuario:");
+    contrasenaRegistrada = prompt("Registra tu contraseña:");
+}
+
+function iniciarSesion() {
+    let nombreUsuario = prompt("Introduce tu nombre de usuario:");
+    let contrasena = prompt("Introduce tu contraseña:");
+
+    while (nombreUsuario !== nombreUsuarioRegistrado || contrasena !== contrasenaRegistrada) {
         alert("Nombre de usuario o contraseña incorrectos. Inténtalo de nuevo.");
         nombreUsuario = prompt("Introduce tu nombre de usuario:");
         contrasena = prompt("Introduce tu contraseña:");
     }
 
-    if (nombreUsuario === nombreUsuarioCorrecto && contrasena === contrasenaCorrecta) {
-        alert("¡Inicio de sesión exitoso!");
-    }
+    alert("¡Inicio de sesión exitoso!");
 }
 
-iniciarSesion(prompt("Introduce tu nombre de usuario:"), prompt("Introduce tu contraseña:"));
+// Primero registra un nuevo usuario
+registrarUsuario();
+
+// Luego intenta iniciar sesión
+iniciarSesion();

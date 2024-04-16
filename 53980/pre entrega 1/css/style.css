@@ -1,0 +1,35 @@
+body {
+    font-family: Arial, sans-serif;
+}
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    background-color: #333;
+    color: white;
+    padding: 15px 0;
+}
+.banner {
+    background-color: #f2f2f2;
+    padding: 20px;
+    text-align: center;
+}
+.main-content {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+.main-content img {
+    width: 50%;
+    border: 5px solid #ff6347;
+}
+.main-content div {
+    width: 40%;
+    padding: 20px;
+}
+.main-content button {
+    background-color: #ff6347;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
