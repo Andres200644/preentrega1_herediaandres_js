@@ -247,3 +247,28 @@ footer {
     margin: 0;
     font-size: small;
 }
+.ropa-grid {
+    display: inline-flex;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    justify-content: space-between;
+}
+.ropa-card {
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+}
+.ropa-card img {
+    width: 50%;
+    height: auto;
+}
+.ropa-card h2 {
+    font-size: 20px;
+    margin: 10px 0;
+    text-align: center;
+}
+.ropa-card p {
+    color: #777;
+    text-align: center;
+}
