@@ -25,3 +25,7 @@ registrarUsuario();
 
 // Luego intenta iniciar sesión
 iniciarSesion();
+
+let boton = document.getElementyId("botonAgregarCarrito")
+//boton.addEventListener("click", AgregarCarrito)
+boton.oneclick = AgregarCarrito
