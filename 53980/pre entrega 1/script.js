@@ -30,31 +30,6 @@ let boton = document.getElementyId("botonAgregarCarrito")
 //boton.addEventListener("click", AgregarCarrito)
 boton.oneclick = AgregarCarrito
 
-function agregarProductoAlCarrito(e) {
-    console.dir(e.target);
-    console.log(e.target.id);
-
-    let idDelProducto = Number(e.target.id);
-
-    let posProductoEnCarrito = carrito.findIndex(producto => producto.id === idDelProducto);
-    let productoBuscado = listaProductos.find(producto => producto.id === idDelProducto);
-
-    if (posProductoEnCarrito !== -1) {
-        carrito[posProductoEnCarrito].unidades++;
-        carrito[posProductoEnCarrito].subtotal = carrito[posProductoEnCarrito].precioUnitario * carrito[posProductoEnCarrito].unidades;
-    } else {
-        carrito.push({
-            id: productoBuscado.id,
-            nombre: productoBuscado.nombre,
-            precioUnitario: productoBuscado.precio,
-            unidades: 1,
-            subtotal: productoBuscado.precio
-        });
-    }
-
-    console.log(carrito);
-}
-
 function renderizarProductos(productos, carrito) {
     let contenedorProductos = document.getElementById("contenedorProductos");
     contenedorProductos.innerHTML = "";
