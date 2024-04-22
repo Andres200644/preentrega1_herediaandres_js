@@ -67,3 +67,24 @@ function renderizarCarrito(carrito) {
         contenedorCarrito.appendChild(tarjetaProductoCarrito);
     });
 }
+
+// BUSCAR PRODUCTO
+function buscarProducto(arr, busqueda, propiedad) {
+    const resultado = arr.filter((producto) => producto[propiedad].includes(busqueda));
+    if(resultado.length === 0) {
+        alert('No se encontraron productos.');
+    } else {
+        const mensajeResultado = resultado.map((producto) =>
+        `ID: ${producto.id}
+        Producto: ${producto.nombre}
+        Marca: ${producto.marca}
+        Modelo: ${producto.modelo}
+        Categoria: ${producto.categoria}
+        Stock: ${producto.stock}
+        Precio: ${producto.precio}`).join('\n');
+        alert(`Productos encontrados (${resultado.length}) resultados:\n${mensajeResultado}`)
+    }
+}
+
+let busca = prompt('Ingrese la búsqueda')
+buscarProducto(productos,busca,'marca')
