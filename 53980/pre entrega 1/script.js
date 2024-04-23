@@ -19,12 +19,44 @@ function iniciarSesion() {
 
     alert("¡Inicio de sesión exitoso!");
 }
-
 // Primero registra un nuevo usuario
 registrarUsuario();
 
 // Luego intenta iniciar sesión
 iniciarSesion();
+let listaProductos = [
+    { id: 12, nombre: "remera manga larga", categoria: "indumentaria", stock: 3, precio: 7300, rutaImagen: "short.jpg" },
+    { id: 15, nombre: "short de basquet", categoria: "indumentaria", stock: 8, precio: 5000, rutaImagen: "short.jpg" },
+    { id: 2, nombre: "pelota de futbol", categoria:"deportes" , stock :2 , precio :5800 , rutaImagen :"pelota-futbol.jpg"},
+    { id :7 , nombre :"remera mangas cortas" , categoria :"indumentaria" , stock :4 , precio :4500 , rutaImagen :"remera.jpg"},
+    { id :9 , nombre :"pelota de volley" , categoria :"deportes" , stock :1 , precio :2800 , rutaImagen :"pelota-voley.jpg"},
+    { id :5 , nombre :"gorra 1" ,"categoria":"indumentaria","stock":7,"precio":2650,"rutaImagen":"gorra.jpg"},
+    { id :17 ,"nombre":"gorra 2","categoria":"indumentariaaa","stock":7,"precio":2650,"rutaImagen":"gorra2.jpg"}
+  ];
+  
+  principal(listaProductos)
+  
+  function principal(productos) {
+    let carrito = []
+    let carritoLS = JSON.parse(localStorage.getItem("carrito"))
+    if (carritoLS) {
+      carrito = carritoLS
+    }
+    renderizarCarrito(carrito)
+  
+    let botonBuscar = document.getElementById("botonBuscar")
+    botonBuscar.addEventListener("click", () => filtrarYRenderizar(productos, carrito))
+    renderizarProductos(productos, carrito)
+  
+    let botonComprar = document.getElementById("botonComprar")
+    botonComprar.addEventListener("click", finalizarCompra())
+  }
+  
+  function finalizarCompra() {
+    localStorage.removeItem("carrito")
+  }
+  
+
 
 let boton = document.getElementyId("botonAgregarCarrito")
 //boton.addEventListener("click", AgregarCarrito)
@@ -73,7 +105,7 @@ function buscarProducto(arr, busqueda, propiedad) {
     const resultado = arr.filter((producto) => producto[propiedad].includes(busqueda));
     if(resultado.length === 0) {
         alert('No se encontraron productos.');
-    } else {
+    } else {                                                
         const mensajeResultado = resultado.map((producto) =>
         `ID: ${producto.id}
         Producto: ${producto.nombre}
@@ -86,5 +118,28 @@ function buscarProducto(arr, busqueda, propiedad) {
     }
 }
 
-let busca = prompt('Ingrese la búsqueda')
-buscarProducto(productos,busca,'marca')
+function principal(productos) {
+    let carrito = []
+    let carritoLS = JSON.parse(localStorage.getItem("carrito"))
+    if (carritoLS) {
+        carrito = carritoLS
+        renderizarCarrito(carrito)
+    }
+    
+    let botonBuscar = document.getElementById("botonBuscar")
+    botonBuscar.addEventListener("click", () => filtrarYRenderizar(productos, carrito))
+    
+    let botonComprar = document.getElementById("botonComprar")
+    botonComprar.addEventListener("click", finalizarCompra)
+}
+
+function obtenerCarritoLS() {
+    let carrito = []
+    let carritoLS = JSON.parse(localStorage.getItem("carrito"))
+    if (carritoLS) {
+        carrito += carritoLS
+     }
+     return carrito
+}
+
+
