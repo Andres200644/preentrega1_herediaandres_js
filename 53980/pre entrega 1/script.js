@@ -30,11 +30,6 @@ let listaProductos = [
     { id :17 , nombre :" playera ", categoria :" indumentaria ", stock :7 , precio :575 , rutaImagen :" ropa5.jpg"},
 ];
 
-let botonBuscar = document.getElementById("botonBuscar");
-let inputBusqueda = document.getElementById("inputBusqueda");
-
-console.dir(inputBusqueda);
-
 function crearTarjetasDeProductos (productos) {
    let contenedorProductos = document.getElementById("contenedorProductos");
    productos.forEach(producto => {
