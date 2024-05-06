@@ -44,32 +44,32 @@ class Producto {
 
 // array de productos
 // nombre, marca, modelo, categoria, stock, precio, imagen
-let productos  = [
-    new Producto(1, "Jordan", "Air Jordan 1 Mid toe",'Jordan Caballeros', 9, 3199,"../pre entrega 1/images/Jordan1.jpg" ),
-    new Producto(2, "Jordan", "Air Jordan 1 Mid Black Royal",'Jordan Caballeros',  8, 3199,"../pre entrega 1/images/Jordan2.jpg"),
-    new Producto(3, "Jordan", "Air Jordan Jumpman",'Jordan Caballeros', 12, 3800,"../pre entrega 1/images/Jordan3.jpg"),
-    new Producto(4, "Jordan",  "Air Jordan Legacy 312 low",'Jordan Caballeros',  10, 4600,"../pre entrega 1/images/jordan4.jpg"),
-    new Producto(5, "Jordan", "Air Jordan 5Navy",'Jordan Caballeros', 6, 21999,"../pre entrega 1/images/jordan5.jpg"),
-    new Producto(6, "Jordan",  "Air Jordan 4 craft",'Jordan Caballeros',  20, 4600, "../pre entrega 1/images/jordan6.jpg"),
-    new Producto(7, "Jordan",  "Air Jordan Legacy 312 low",'Jordan Caballeros',  20, 5100,"../pre entrega 1/images/jordan7.jpg"),
-    new Producto(8, "Jordan",  "Air Jordan Legacy 312 Low",'Jordan Caballeros',  7, 24999,"../pre entrega 1/images/jordan8.jpg"),
-    new Producto(9, "Jordan",  "Playera Jordan Brand",'Jordan Caballeros',  15, 849,"../pre entrega 1/images/ropa1.jpg"),
-    new Producto(10, "Addidas",  "Addidas Originals",'Addidas Caballeros',  20, 799,"../pre entrega 1/images/ropa2.jpg"),
-    new Producto(11, "Puma",  "Playera Puma T7",'Puma Caballeros',  3, 1300,"../pre entrega 1/images/ropa3.jpg"),
-    new Producto(12, "Addidas",  "Playera Worldwide Hoops City",'Addidas Caballeros',  19, 699,"../pre entrega 1/images/ropa4.jpg"),
-    new Producto(13, "Addidas",  "Playera Classic Monogram",'Addidas Caballeros',  9, 1200,"../pre entrega 1/images/ropa5.jpg"),
-    new Producto(14, "Nike",  "Playera Sportwear Max90",'   Nike Caballeros',  31, 699,"../pre entrega 1/images/ropa6.jpg"),
-    new Producto(15, "Addidas",  "Playera Manchester United",'Addidas Caballeros',  14, 2800,"../pre entrega 1/images/ropa7.jpg"),
-    new Producto(16, "Jordan",  "PlayeraJordan Brand",'Jordan Caballeros',  30, 1149,"../pre entrega 1/images/ropa8.jpg"),
-    new Producto(17, "Addidas",  "Playera Worldwide Hoops City",'Addidas Caballeros',  10, 699,"../pre entrega 1/images/ropa9.jpg"),
-    new Producto(18, "Addidas",  "Playera Liquid Trifoil",'Addidas Caballeros',  23, 511,"../pre entrega 1/images/ropa10.jpg"),
-    new Producto(19, "Nike",  "Top Spprtswear",'Addidas Damas',  10, 625,"../pre entrega 1/images/ropaM1.jpg"),
-    new Producto(20, "Jordan",  "Playera Jordan Graphic",'Jordan Damas',  18, 575,"../pre entrega 1/images/ropaM2.jpg"),
-    new Producto(21, "Addidas",  "  Playera Adidas Trefoil Adicolor",'Addidas Damas',  10, 699,"../pre entrega 1/images/ropaM3.jpg"),
-    new Producto(20, "Jordan",  "Playera Jordan Graphic2",'Jordan Damas',  18, 575,"../pre entrega 1/images/ropaM4.jpg"),
-    new Producto(20, "Jordan",  "Playera Jordan Graphic2",'Jordan Damas',  18, 575,"../pre entrega 1/images/ropaM5.jpg"),
-    new Producto(20, "Jordan",  "Playera Addidas Zebra",'Addidas Damas',  18, 543,"../pre entrega 1/images/ropaM6.jpg"),
-    new Producto(20, "Pma",  "Playera Puma Classics",'Puma Damas',  18, 599,"../pre entrega 1/images/ropaM7.jpg"),
+let productos = [
+    new Producto(1, "Jordan", "Air Jordan 1 Mid toe", 'Jordan Caballeros', 9, 3199, "../pre entrega 1/images/Jordan1.jpg"),
+    new Producto(2, "Jordan", "Air Jordan 1 Mid Black Royal", 'Jordan Caballeros', 8, 3199, "../pre entrega 1/images/Jordan2.jpg"),
+    new Producto(3, "Jordan", "Air Jordan Jumpman", 'Jordan Caballeros', 12, 3800, "../pre entrega 1/images/Jordan3.jpg"),
+    new Producto(4, "Jordan", "Air Jordan Legacy 312 low", 'Jordan Caballeros', 10, 4600, "../pre entrega 1/images/jordan4.jpg"),
+    new Producto(5, "Jordan", "Air Jordan 5Navy", 'Jordan Caballeros', 6, 21999, "../pre entrega 1/images/jordan5.jpg"),
+    new Producto(6, "Jordan", "Air Jordan 4 craft", 'Jordan Caballeros', 20, 4600, "../pre entrega 1/images/jordan6.jpg"),
+    new Producto(7, "Jordan", "Air Jordan Legacy 312 low", 'Jordan Caballeros', 20, 5100, "../pre entrega 1/images/jordan7.jpg"),
+    new Producto(8, "Jordan", "Air Jordan Legacy 312 Low", 'Jordan Caballeros', 7, 24999, "../pre entrega 1/images/jordan8.jpg"),
+    new Producto(9, "Jordan", "Playera Jordan Brand", 'Jordan Caballeros', 15, 849, "../pre entrega 1/images/ropa1.jpg"),
+    new Producto(10, "Addidas", "Addidas Originals", 'Addidas Caballeros', 20, 799, "../pre entrega 1/images/ropa2.jpg"),
+    new Producto(11, "Puma", "Playera Puma T7", 'Puma Caballeros', 3, 1300, "../pre entrega 1/images/ropa3.jpg"),
+    new Producto(12, "Addidas", "Playera Worldwide Hoops City", 'Addidas Caballeros', 19, 699, "../pre entrega 1/images/ropa4.jpg"),
+    new Producto(13, "Addidas", "Playera Classic Monogram", 'Addidas Caballeros', 9, 1200, "../pre entrega 1/images/ropa5.jpg"),
+    new Producto(14, "Nike", "Playera Sportwear Max90", '   Nike Caballeros', 31, 699, "../pre entrega 1/images/ropa6.jpg"),
+    new Producto(15, "Addidas", "Playera Manchester United", 'Addidas Caballeros', 14, 2800, "../pre entrega 1/images/ropa7.jpg"),
+    new Producto(16, "Jordan", "PlayeraJordan Brand", 'Jordan Caballeros', 30, 1149, "../pre entrega 1/images/ropa8.jpg"),
+    new Producto(17, "Addidas", "Playera Worldwide Hoops City", 'Addidas Caballeros', 10, 699, "../pre entrega 1/images/ropa9.jpg"),
+    new Producto(18, "Addidas", "Playera Liquid Trifoil", 'Addidas Caballeros', 23, 511, "../pre entrega 1/images/ropa10.jpg"),
+    new Producto(19, "Nike", "Top Spprtswear", 'Addidas Damas', 10, 625, "../pre entrega 1/images/ropaM1.jpg"),
+    new Producto(20, "Jordan", "Playera Jordan Graphic", 'Jordan Damas', 18, 575, "../pre entrega 1/images/ropaM2.jpg"),
+    new Producto(21, "Addidas", "  Playera Adidas Trefoil Adicolor", 'Addidas Damas', 10, 699, "../pre entrega 1/images/ropaM3.jpg"),
+    new Producto(20, "Jordan", "Playera Jordan Graphic2", 'Jordan Damas', 18, 575, "../pre entrega 1/images/ropaM4.jpg"),
+    new Producto(20, "Jordan", "Playera Jordan Graphic2", 'Jordan Damas', 18, 575, "../pre entrega 1/images/ropaM5.jpg"),
+    new Producto(20, "Jordan", "Playera Addidas Zebra", 'Addidas Damas', 18, 543, "../pre entrega 1/images/ropaM6.jpg"),
+    new Producto(20, "Pma", "Playera Puma Classics", 'Puma Damas', 18, 599, "../pre entrega 1/images/ropaM7.jpg"),
 
 
 
@@ -223,7 +223,7 @@ function principal() {
     // Botones del Menu Categorias
     //boton Jordan
     let btnCategoriasJordan = document.getElementById("btnCategoriasJordan");
-    btnCategoriasMotherboards.onclick = () => filtrarPorCategoria(productos, "Jordan");
+    btnCategoriasJordan.onclick = () => filtrarPorCategoria(productos, "Jordan");
     //boton Ropa
     let btnCategoriasRopa = document.getElementById("btnCategoriasRopa");
     btnCategoriasRopa.onclick = () => filtrarPorCategoria(productos, "Ropa");
