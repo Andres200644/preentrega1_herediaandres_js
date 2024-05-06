@@ -1,26 +1,32 @@
-//algoritmo con condicional y con ciclo 
-let nombreUsuarioRegistrado;
-let contrasenaRegistrada;
+let usuariosRegistrados = {};
 
 function registrarUsuario() {
-    nombreUsuarioRegistrado = prompt("Registra tu nombre de usuario:");
-    contrasenaRegistrada = prompt("Registra tu contraseña:");
+    let nombreUsuario = prompt("Por favor, registra tu nombre de usuario:");
+    let contraseña = prompt("Por favor, registra tu contraseña:");
+
+    if (nombreUsuario in usuariosRegistrados) {
+        alert("Este nombre de usuario ya está registrado. Por favor, elige otro.");
+        registrarUsuario();
+    } else {
+        usuariosRegistrados[nombreUsuario] = contraseña;
+        alert("Usuario registrado exitosamente!");
+    }
 }
 
 function iniciarSesion() {
-    let nombreUsuario = prompt("Introduce tu nombre de usuario:");
-    let contrasena = prompt("Introduce tu contraseña:");
+    let nombreUsuario = prompt("Por favor, ingresa tu nombre de usuario:");
+    let contraseña = prompt("Por favor, ingresa tu contraseña:");
 
-    while (nombreUsuario !== nombreUsuarioRegistrado || contrasena !== contrasenaRegistrada) {
-        alert("Nombre de usuario o contraseña incorrectos. Inténtalo de nuevo.");
-        nombreUsuario = prompt("Introduce tu nombre de usuario:");
-        contrasena = prompt("Introduce tu contraseña:");
+    if (nombreUsuario in usuariosRegistrados && usuariosRegistrados[nombreUsuario] === contraseña) {
+        alert("Has iniciado sesión exitosamente!");
+    } else {
+        alert("Nombre de usuario o contraseña incorrectos. Por favor, intenta de nuevo.");
+        iniciarSesion();
     }
-
-    alert("¡Inicio de sesión exitoso!");
 }
-// Primero registra un nuevo usuario
+
 registrarUsuario();
+iniciarSesion();
 
 // clase constructora de productos
 class Producto {
@@ -90,22 +96,6 @@ function listarTodos(arr) {
         }
     });
 }
-
-// Filtra por categorías
-function filtrarPorCategoria(arr, categoria) {
-    productosListados = [];
-    //vacia el div
-    let contenedorTarjetas = vaciarDiv();
-    // Filtrar por categorías
-    let productosFiltrados = arr.filter(item => item.categoria === categoria);
-    productosFiltrados.forEach(producto => {
-        if (producto.stock > 0) {
-            listarTarjeta(producto, contenedorTarjetas);
-        }
-    });
-    productosListados.push(...productosFiltrados)
-}
-
 // busca productos
 function buscarProductos(arr) {
     productosListados = [];
@@ -239,15 +229,15 @@ function principal() {
     btnMenuPrincipalProductos.onclick = () => listarTodos(productos);
 
     // Botones del Menu Categorias
-    //boton motherboards
-    let btnCategoriasMotherboards = document.getElementById("btnCategoriasMotherboard");
-    btnCategoriasMotherboards.onclick = () => filtrarPorCategoria(productos, "motherboard");
-    //boton procesadores
-    let btnCategoriasProcesador = document.getElementById("btnCategoriasProcesador");
-    btnCategoriasProcesador.onclick = () => filtrarPorCategoria(productos, "procesador");
-    //boton memorias
-    let btnCategoriasMemoria = document.getElementById("btnCategoriasMemoria");
-    btnCategoriasMemoria.onclick = () => filtrarPorCategoria(productos, "memoria RAM");
+    //boton Jordan
+    let btnCategoriasJordan = document.getElementById("btnCategoriasJordan");
+    btnCategoriasMotherboards.onclick = () => filtrarPorCategoria(productos, "Jordan");
+    //boton Ropa
+    let btnCategoriasRopa = document.getElementById("btnCategoriasRopa");
+    btnCategoriasRopa.onclick = () => filtrarPorCategoria(productos, "Ropa");
+    //boton Ropa Mujer
+    let btnCategoriasRopaMujer = document.getElementById("btnCategoriasRopaMujer");
+    btnCategoriasRopaMujer.onclick = () => filtrarPorCategoria(productos, "RopaMujer");
     // boton Buscar
     let btnBuscar = document.getElementById("btnBuscar");
     btnBuscar.onclick = () => buscarProductos(productos);
