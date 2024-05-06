@@ -75,14 +75,6 @@ let productos  = [
 
 ]
 
-// vacia el div antes de volver a listar
-function vaciarDiv() {
-    let contenedorTarjetas = document.getElementById("contenedor-tarjetas");
-    contenedorTarjetas.className = "container-tarjeta";
-    contenedorTarjetas.innerHTML = "";
-    return contenedorTarjetas
-}
-
 // lista Todos los productos
 function listarTodos(arr) {
     productosListados = [];
