@@ -64,7 +64,6 @@ header{
     margin-bottom: 16px;
     transition-duration: .5s;
 }
-/*end header*/
 .products{
     padding-top: 170px;
     display: flex;
@@ -116,8 +115,6 @@ header{
     border: solid 2px rgb(0, 255, 26);
     transition-duration: .3s;
 }
-
-/*float cart*/
 .cart-products .item img{
     width: 115px;
 }
@@ -158,7 +155,6 @@ header{
     font-weight: 700;
 }
 
-/*stye to btn close*/
 p.close-btn{
     top: -4px;
     right: 6px;
