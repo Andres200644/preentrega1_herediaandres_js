@@ -1,105 +1,69 @@
-let allContainerCart = document.querySelector('.products');
-let containerBuyCart = document.querySelector('.card-items');
-let priceTotal = document.querySelector('.price-total')
-let amountProduct = document.querySelector('.count-product');
+const products = [
+    { id: 1, name: 'Apple iPhone 15 (128 GB) - Azul', price: 17909, oldPrice: 19499, img: "./images/iphone 15.jpg" },
+    { id: 2, name: 'Apple iPhone 15 (256 GB) - Negro', price: 19907, oldPrice: 21499, img: "./images/iphone 15 negro.jpg" },
+    { id: 3, name: 'Apple iPhone 15 Pro (128 GB) - Titanio Negro', price: 22180, oldPrice: 23999, img: "./images/iphone 15 pro negro.jpg" },
+    { id: 4, name: 'Apple iPhone 14 Pro Max (128 GB) - Morado (Reacondicionado)', price: 16818, img: "./images/iphone 14 pro max Reacondicionado.jpg" },
+    { id: 5, name: 'Apple iPhone 14 (128 GB) - Negro', price: 20801, oldPrice: 10538, img: "./images/iphone 14 azul.jpg" },
 
+];
 
-let buyThings = [];
-let totalCard = 0;
-let countProduct = 0;
+let cart = [];
 
-
-loadEventListenrs();
-function loadEventListenrs(){
-    allContainerCart.addEventListener('click', addProduct);
-
-    containerBuyCart.addEventListener('click', deleteProduct);
-}
-
-function addProduct(e){
-    e.preventDefault();
-    if (e.target.classList.contains('btn-add-cart')) {
-        const selectProduct = e.target.parentElement; 
-        readTheContent(selectProduct);
-    }
-}
-
-function deleteProduct(e) {
-    if (e.target.classList.contains('delete-product')) {
-        const deleteId = e.target.getAttribute('data-id');
-
-        buyThings.forEach(value => {
-            if (value.id == deleteId) {
-                let priceReduce = parseFloat(value.price) * parseFloat(value.amount);
-                totalCard =  totalCard - priceReduce;
-                totalCard = totalCard.toFixed(2);
-            }
-        });
-        buyThings = buyThings.filter(product => product.id !== deleteId);
-        
-        countProduct--;
-    }
-
-    if (buyThings.length === 0) {
-        priceTotal.innerHTML = 0;
-        amountProduct.innerHTML = 0;
-    }
-    loadHtml();
-}
-
-function readTheContent(product){
-    const infoProduct = {
-        image: product.querySelector('div img').src,
-        title: product.querySelector('.title').textContent,
-        price: product.querySelector('div p span').textContent,
-        id: product.querySelector('a').getAttribute('data-id'),
-        amount: 1
-    }
-
-    totalCard = parseFloat(totalCard) + parseFloat(infoProduct.price);
-    totalCard = totalCard.toFixed(2);
-
-    const exist = buyThings.some(product => product.id === infoProduct.id);
-    if (exist) {
-        const pro = buyThings.map(product => {
-            if (product.id === infoProduct.id) {
-                product.amount++;
-                return product;
-            } else {
-                return product
-            }
-        });
-        buyThings = [...pro];
-    } else {
-        buyThings = [...buyThings, infoProduct]
-        countProduct++;
-    }
-    loadHtml();
-}
-
-function loadHtml(){
-    clearHtml();
-    buyThings.forEach(product => {
-        const {image, title, price, amount, id} = product;
-        const row = document.createElement('div');
-        row.classList.add('item');
-        row.innerHTML = `
-            <img src="${image}" alt="">
-            <div class="item-content">
-                <h5>${title}</h5>
-                <h5 class="cart-price">${price}$</h5>
-                <h6>Amount: ${amount}</h6>
-            </div>
-            <span class="delete-product" data-id="${id}">X</span>
+function displayProducts(productsToDisplay) {
+    const productsDiv = document.getElementById('products');
+    productsDiv.innerHTML = '';
+    productsToDisplay.forEach(product => {
+        const productDiv = document.createElement('div');
+        productDiv.className = 'product';
+        productDiv.innerHTML = `
+            <img src="${product.img}" alt="${product.name}">
+            <h3>${product.name}</h3>
+            <p class="price">Precio: $${product.price}</p>
+            ${product.oldPrice ? `<p class="old-price">Precio de lista: $${product.oldPrice}</p>` : ''}
+            <button class="add-to-cart-btn" onclick="addToCart(${product.id})">Agregar al Carrito</button>
         `;
-
-        containerBuyCart.appendChild(row);
-
-        priceTotal.innerHTML = totalCard;
-
-        amountProduct.innerHTML = countProduct;
+        productsDiv.appendChild(productDiv);
     });
 }
- function clearHtml(){
-    containerBuyCart.innerHTML = '';
- }
+
+function displayCart() {
+    const cartDiv = document.getElementById('cart');
+    cartDiv.innerHTML = '';
+    cart.forEach((item, index) => {
+        const cartItemDiv = document.createElement('div');
+        cartItemDiv.className = 'cart-item';
+        cartItemDiv.innerHTML = `
+            <h4>${item.name}</h4>
+            <p>Precio: $${item.price}</p>
+            <button class="remove-btn" onclick="removeFromCart(${index})">Eliminar</button>
+        `;
+        cartDiv.appendChild(cartItemDiv);
+    });
+}
+
+function addToCart(productId) {
+    const product = products.find(p => p.id === productId);
+    if (product) {
+        cart.push(product);
+        displayCart();
+        alert(`Producto "${product.name}" agregado al carrito`);
+    } else {
+        alert('Producto no encontrado');
+    }
+}
+
+function removeFromCart(index) {
+    const product = cart[index];
+    cart.splice(index, 1);
+    displayCart();
+    alert(`Producto "${product.name}" eliminado del carrito`);
+}
+
+function searchProduct() {
+    const query = document.getElementById('searchInput').value.toLowerCase();
+    const filteredProducts = products.filter(product => product.name.toLowerCase().includes(query));
+    displayProducts(filteredProducts);
+}
+
+displayProducts(products);
+displayCart();
