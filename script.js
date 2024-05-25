@@ -1,8 +1,8 @@
 
 const products = [
-    { id: 1, name: 'iPhone 15', price: 800, img: "../JavaScript/images/iphone 15.jpg" },
-    { id: 2, name: 'iPhone 15 pro', price: 999, img: "../JavaScript/images/iphone 15 pro negro.jpg" },
-    { id: 3, name: 'iPhone  14 pro max', price: 699, img: "../JavaScript/images/iphone 14 pro max Reacondicionado.jpg" }
+    { id: 1, name: 'iPhone 15', price: 800, img: "./images/iphone 15.jpg" },
+    { id: 2, name: 'iPhone 15 pro', price: 999, img: "./images/iphone 15 pro negro.jpg" },
+    { id: 3, name: 'iPhone  14 pro max', price: 699, img: "./images/iphone 14 pro max Reacondicionado.jpg" }
 ];
 
 let cart = [];
