@@ -1,57 +1,18 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nova Tech</title>
+    <title>Nova tech</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Nova Tech</h1>
-    <div>
-        <input class ="busqueda "type="text" id="searchInput" placeholder="Buscar producto...">
-        <button onclick="searchProduct()">Buscar</button>
-    </div>
-    
-</div>
-<div id="products">
-    <div class="product">
-        <img src="../JavaScript/images/iphone 15.jpg" alt="iPhone 15 Azul">
-        <h2>Apple Airpods 3</h2>
-        <p class="price">$3,700</p>
-        <button>Agregar al carrito</button>
-    </div>
-    <div class="product">
-        <img src="../JavaScript/images/iphone 15 negro.jpg" alt="iPhone 15 Negro">
-        <h2>Apple iPhone 15 (256 GB) - Negro</h2>
-        <p class="price">$19,907.00</p>
-        <p class="old-price">$21,499.00</p>
-        <button>Agregar al carrito</button>
-    </div>
-    <div class="product">
-        <img src="iphone15pro-negro.jpg" alt="iPhone 15 Pro Negro">
-        <h2>Apple iPhone 15 Pro (128 GB) - Titanio Negro</h2>
-        <p class="price">$22,180.00</p>
-        <p class="old-price">$23,999.00</p>
-        <button>Agregar al carrito</button>
-    </div>
-    <div class="product">
-        <img src="iphone15-reacondicionado.jpg" alt="iPhone 15 Reacondicionado">
-        <h2>Apple iPhone 15 (128 GB) - Negro (Reacondicionado)</h2>
-        <p class="price">$13,499.00</p>
-        <p>Entrega GRATIS entre el 31 de may - 6 de jun</p>
-        <button>Agregar al carrito</button>
-    </div>
-    <div class="product">
-        <img src="iphone15plus-negro.jpg" alt="iPhone 15 Plus Negro">
-        <h2>Apple iPhone 15 Plus (128 GB) - Negro</h2>
-        <p class="price">$20,801.30</p>
-        <p class="old-price">$21,999.00</p>
-        <button>Agregar al carrito</button>
-    </div>
-</div>
-    <h2>Carrito de Compras</h2>
-    <div id="cart"></div>
+    <header>
+        <h1>Tienda de iPhones</h1>
+        <button onclick="viewCart()">Ver Carrito</button>
+        <button onclick="searchProduct()">Buscar Producto</button>
+    </header>
+    <div id="product-container" class="product-container"></div>
     <script src="script.js"></script>
 </body>
 </html>

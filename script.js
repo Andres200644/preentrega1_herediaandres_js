@@ -1,43 +1,28 @@
 const products = [
-    { id: 1, name: 'Apple iPhone 15 (128 GB) - Azul', price: 17909, oldPrice: 19499, img: "./images/iphone 15.jpg" },
-    { id: 2, name: 'Apple iPhone 15 (256 GB) - Negro', price: 19907, oldPrice: 21499, img: "./images/iphone 15 negro.jpg" },
-    { id: 3, name: 'Apple iPhone 15 Pro (128 GB) - Titanio Negro', price: 22180, oldPrice: 23999, img: "./images/iphone 15 pro negro.jpg" },
-    { id: 4, name: 'Apple iPhone 14 Pro Max (128 GB) - Morado (Reacondicionado)', price: 16818, img: "./images/iphone 14 pro max Reacondicionado.jpg" },
-    { id: 5, name: 'Apple iPhone 14 (128 GB) - Negro', price: 20801, oldPrice: 10538, img: "./images/iphone 14 azul.jpg" },
-
+    { id: 1, name: 'iPhone 15', price: 999, img: "../JavaScript/images/iphone 15.jpg" },
+    { id: 2, name: 'iPhone 14', price: 799, img: "../JavaScript/images/iphone 14 azul.jpg" },
+    { id: 3, name: 'iPhone 15 pro', price: 999, img: "../JavaScript/images/iphone 15 pro negro.jpg" }
 ];
 
 let cart = [];
 
-function displayProducts(productsToDisplay) {
-    const productsDiv = document.getElementById('products');
-    productsDiv.innerHTML = '';
-    productsToDisplay.forEach(product => {
-        const productDiv = document.createElement('div');
-        productDiv.className = 'product';
-        productDiv.innerHTML = `
-            <img src="${product.img}" alt="${product.name}">
-            <h3>${product.name}</h3>
-            <p class="price">Precio: $${product.price}</p>
-            ${product.oldPrice ? `<p class="old-price">Precio de lista: $${product.oldPrice}</p>` : ''}
-            <button class="add-to-cart-btn" onclick="addToCart(${product.id})">Agregar al Carrito</button>
-        `;
-        productsDiv.appendChild(productDiv);
-    });
-}
+document.addEventListener('DOMContentLoaded', () => {
+    displayProducts();
+});
 
-function displayCart() {
-    const cartDiv = document.getElementById('cart');
-    cartDiv.innerHTML = '';
-    cart.forEach((item, index) => {
-        const cartItemDiv = document.createElement('div');
-        cartItemDiv.className = 'cart-item';
-        cartItemDiv.innerHTML = `
-            <h4>${item.name}</h4>
-            <p>Precio: $${item.price}</p>
-            <button class="remove-btn" onclick="removeFromCart(${index})">Eliminar</button>
+function displayProducts() {
+    const productContainer = document.getElementById('product-container');
+    productContainer.innerHTML = '';
+    products.forEach(product => {
+        const productCard = document.createElement('div');
+        productCard.className = 'product-card';
+        productCard.innerHTML = `
+            <img src="${product.img}" alt="${product.name}">
+            <h2>${product.name}</h2>
+            <p>$${product.price}</p>
+            <button onclick="addToCart(${product.id})">Agregar al Carrito</button>
         `;
-        cartDiv.appendChild(cartItemDiv);
+        productContainer.appendChild(productCard);
     });
 }
 
@@ -45,25 +30,46 @@ function addToCart(productId) {
     const product = products.find(p => p.id === productId);
     if (product) {
         cart.push(product);
-        displayCart();
-        alert(`Producto "${product.name}" agregado al carrito`);
-    } else {
-        alert('Producto no encontrado');
+        alert(`${product.name} ha sido agregado al carrito.`);
     }
 }
 
-function removeFromCart(index) {
-    const product = cart[index];
-    cart.splice(index, 1);
-    displayCart();
-    alert(`Producto "${product.name}" eliminado del carrito`);
+function viewCart() {
+    if (cart.length === 0) {
+        alert('El carrito está vacío.');
+        return;
+    }
+    let cartContent = 'Productos en el carrito:\n\n';
+    let total = 0;
+    cart.forEach((product, index) => {
+        cartContent += `${index + 1}. ${product.name} - $${product.price}\n`;
+        total += product.price;
+    });
+    cartContent += `\nTotal: $${total}`;
+    alert(cartContent);
 }
 
 function searchProduct() {
-    const query = document.getElementById('searchInput').value.toLowerCase();
-    const filteredProducts = products.filter(product => product.name.toLowerCase().includes(query));
-    displayProducts(filteredProducts);
+    const searchTerm = prompt('Ingrese el nombre del producto que desea buscar:').toLowerCase();
+    const foundProducts = products.filter(product => product.name.toLowerCase().includes(searchTerm));
+    if (foundProducts.length > 0) {
+        let searchResults = 'Resultados de la búsqueda:\n\n';
+        foundProducts.forEach(product => {
+            searchResults += `${product.name} - $${product.price}\n`;
+        });
+        alert(searchResults);
+    } else {
+        alert('No se encontraron productos.');
+    }
 }
 
-displayProducts(products);
-displayCart();
+function removeFromCart() {
+    const productName = prompt('Ingrese el nombre del producto que desea eliminar del carrito:').toLowerCase();
+    const productIndex = cart.findIndex(product => product.name.toLowerCase() === productName);
+    if (productIndex !== -1) {
+        const removedProduct = cart.splice(productIndex, 1)[0];
+        alert(`${removedProduct.name} ha sido eliminado del carrito.`);
+    } else {
+        alert('Producto no encontrado en el carrito.');
+    }
+}
