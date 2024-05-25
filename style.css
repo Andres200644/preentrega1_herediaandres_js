@@ -60,3 +60,46 @@ header {
 .product-card button:hover {
     background-color: #0056b3;
 }
+
+.cart {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+.cart h2 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.cart ul {
+    list-style: none;
+    padding: 0;
+}
+
+.cart li {
+    margin-bottom: 0.5rem;
+}
+
+.cart-product {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding: 0.5rem 0;
+}
+
+.cart-product img {
+    max-width: 50px;
+    margin-right: 1rem;
+}
+
+.cart-product button {
+    background-color: #ff6347;
+    color: #fff;
+    border: none;
+    padding: 0.3rem 0.5rem;
+    cursor: pointer;
+    font-size: 0.8rem;
+}
