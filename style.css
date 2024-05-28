@@ -103,3 +103,38 @@ header {
     cursor: pointer;
     font-size: 0.8rem;
 }
+
+.cart-container {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+.cart-item {
+    margin-bottom: 10px;
+    padding: 5px;
+    border-bottom: 1px solid #ccc;
+}
+.cart-button {
+    background-color: #50bdb8;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-family: serif;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.cart-icon {
+    font-size: 20px;
+    color: #50bdb8;
+}
+
+.product-details {
+    font-size: 14px;
+    color: #333;
+}
+.cart-item-added {
+    animation: fadeIn 0.5s ease;
+}
