@@ -3,16 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nova tech</title>
+    <title>Lista de Productos</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
-    <header>
-        <h1>Nova tech</h1>
-        <button onclick="viewCart()">Ver Carrito</button>
-        <button onclick="searchProduct()">Buscar Producto</button>
-    </header>
-    <div id="product-container" class="product-container"></div>
+    <h1>Explora nuestros productos</h1>
+    <div class="product-container" id="product-container"></div>
+    <button onclick="searchProduct()">Buscar Producto</button>
     <script src="script.js"></script>
 </body>
 </html>
