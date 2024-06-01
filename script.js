@@ -4,6 +4,13 @@ const products = [
     { id: 3, name: 'iPhone 14', price: 699, img: "./images/iphone 14.png" },
     { id: 4, name: 'iPhone 13', price: 599, img: "./images/iphone 13.png" },
     { id: 5, name: 'iPhone SE', price: 429, img: "./images/iphone se.jpeg " },
+    { id: 6, name: 'Airpods max', price: 549, img: "./images/Airpods Max.jpeg" },
+    { id: 7, name: 'Airpods pro 2', price: 250, img: "./images/Airpods pro 2.jpeg" },
+    { id: 8, name: 'Airpods 3', price: 169, img: "./images/Airpods 3.jpeg" },
+    { id: 9, name: 'Airpods 2', price: 129, img: "./images/Airpods 2.jpeg" },
+    { id: 10, name: 'Apple watch series 9', price: 499, img: "./images/wacth 9.jpeg " },
+    { id: 10, name: 'Apple Watch ultra 2', price: 800, img: "./images/wacth ultra 2.jpeg " },
+    { id: 11, name: 'Apple Watch se', price: 250, img: "./images/watch se.jpeg " },
 ];
 
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
