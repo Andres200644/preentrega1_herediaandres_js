@@ -27,6 +27,7 @@ body {
 .product-card img {
     width: 100%;
     height: auto;
+    border: none;
 }
 
 .product-card h2 {
@@ -50,4 +51,8 @@ button {
 
 button:hover {
     background-color: #1c8021;
+}
+
+.product-card:hover {
+    background-color:transparent;
 }
