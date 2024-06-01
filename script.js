@@ -109,5 +109,5 @@ function removeFromCart(productId) {
 }
 
 function goBack() {
-    window.location.href = 'index.html';
+    window.location.href = 'productos.html';
 }
