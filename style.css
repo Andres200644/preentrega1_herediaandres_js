@@ -21,6 +21,7 @@ body {
     text-align: center;
     width: 200px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    justify-content: left;
 }
 
 .product-card img {
@@ -37,12 +38,13 @@ body {
 }
 
 button {
-    background-color: #007bff;
+    background-color: #009999;
     color: #fff;
     border: none;
-    padding: 10px;
-    border-radius: 5px;
+    padding: 15px;
+    border-radius: 1px;
     cursor: pointer;
+    justify-content:  right;
 }
 
 button:hover {

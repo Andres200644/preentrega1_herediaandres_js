@@ -76,9 +76,8 @@ function viewCart() {
         cartItem.innerHTML = `
             <div class="item-details">
                 <img src="${product.img}" alt="${product.name}">
-                <div class="item-info">
                     <h2>${product.name}</h2>
-                    <p class="price">$${product.price}</p>
+                   
                     <button class="remove-btn" onclick="removeFromCart(${product.id})">Eliminar</button>
                 </div>
             </div>
@@ -90,8 +89,6 @@ function viewCart() {
     const summary = document.createElement('div');
     summary.className = 'summary';
     summary.innerHTML = `
-        <p>Subtotal: $${subtotal.toFixed(2)}</p>
-        <p>Envío: GRATIS</p>
         <h2>Total: $${subtotal.toFixed(2)}</h2>
     `;
     cartContainer.appendChild(summary);
