@@ -73,16 +73,12 @@ function viewCart() {
     cart.forEach(product => {
         const cartItem = document.createElement('div');
         cartItem.className = 'cart-item';
-        cartItem.innerHTML = `
-           
-                   
+        cartItem.innerHTML = `      
                     <img src="${product.img}" alt="${product.name}">
                     <h2>${product.name}</h2>
                     <h2>${product.price}</h2>
-
-                        
-                        <button class="remove-btn" onclick="removeFromCart(${product.id})">Eliminar</button>
                         <div class="item-details">
+                        <button class="remove-btn" onclick="removeFromCart(${product.id})">Eliminar</button>
                 </div>
             </div>
         `;
