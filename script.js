@@ -48,10 +48,10 @@ function addToCart(productId) {
         localStorage.setItem('cart', JSON.stringify(cart));
         Swal.fire({
             icon: 'success',
-            title: 'Agregado!',
+            title: 'Fue agregado exitosamente',
             text: `${product.name} ha sido agregado al carrito.`,
             showConfirmButton: false,
-            timer: 1500
+            timer: 1000
         }).then(() => {
             window.location.href = 'cart.html';
         });
@@ -64,7 +64,7 @@ function viewCart() {
     cart = JSON.parse(localStorage.getItem('cart')) || [];
 
     if (cart.length === 0) {
-        cartContainer.innerHTML = '<p>El carrito está vacío.</p>';
+        cartContainer.innerHTML = '<p>No hay nada en el carrito.</p>';
         return;
     }
 
