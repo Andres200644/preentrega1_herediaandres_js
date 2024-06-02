@@ -7,8 +7,10 @@ body {
 }
 .navbar {
     display: flex;
-    align-items: center; 
-    justify-content: space-between;
+    justify-content: center; 
+    align-items: center;   
+    background-color: #f8f8f8;
+    padding: 10px 20px;
     padding: 2% 6%; 
   }
   
@@ -19,12 +21,15 @@ body {
     overflow: hidden; 
     margin-right: 20px; 
     float: left;
+    
   }
   
   .navbar a {
-    color: #555; 
+    color: #12026d; 
     text-decoration: none; 
     margin-right: 20px;
+    height: 20px;
+    text-align: center;
   }
   
   .navbar a:hover {
@@ -81,9 +86,15 @@ button:hover {
 .product-card:hover {
     background-color:transparent;
 }
-nav-var {
-    height: 120px;
-    width: 120px;
-    background-color: transparent;
-    text-decoration: none;
+
+@media (max-width: 1000px) {
+    .product-card {
+        flex: 1 1 calc(50% - 40px); 
+    }
+}
+
+@media (max-width: 600px) {
+    .product-card {
+        flex: 1 1 100%; 
+    }
 }
