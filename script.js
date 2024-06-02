@@ -49,7 +49,7 @@ function addToCart(productId) {
         Swal.fire({
             icon: 'success',
             title: 'Fue agregado exitosamente',
-            text: `${product.price} ha sido agregado al carrito.`,
+            text: `${product.name} ha sido agregado al carrito.`,
             showConfirmButton: false,
             timer: 1000
         }).then(() => {
