@@ -9,7 +9,7 @@ body {
     display: flex;
     justify-content: center; 
     align-items: center;   
-    background-color: #f8f8f8;
+    background-color: #003566;
     padding: 10px 20px;
     padding: 2% 6%; 
   }
@@ -25,7 +25,7 @@ body {
   }
   
   .navbar a {
-    color: #12026d; 
+    color: #ffffff; 
     text-decoration: none; 
     margin-right: 20px;
     height: 20px;
