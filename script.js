@@ -10,8 +10,8 @@ const products = [
     { id: 8, name: 'Airpods 3', price: 169, img: "./images/Airpods 3.jpeg" },
     { id: 9, name: 'Airpods 2', price: 129, img: "./images/Airpods 2.jpeg" },
     { id: 10, name: 'Apple watch series 9', price: 499, img: "./images/wacth 9.jpeg " },
-    { id: 10, name: 'Apple Watch ultra 2', price: 800, img: "./images/wacth ultra 2.jpeg " },
-    { id: 11, name: 'Apple Watch se', price: 250, img: "./images/watch se.jpeg " },
+    { id: 11, name: 'Apple Watch ultra 2', price: 800, img: "./images/wacth ultra 2.jpeg " },
+    { id: 12, name: 'Apple Watch se', price: 250, img: "./images/watch se.jpeg " },
 ];
 
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
