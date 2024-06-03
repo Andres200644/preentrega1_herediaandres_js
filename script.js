@@ -52,7 +52,7 @@ function addToCart(productId) {
             title: 'Fue agregado exitosamente',
             text: `${product.name} ha sido agregado al carrito.`,
             showConfirmButton: false,
-            timer: 1000
+            timer: 800
         }).then(() => {
             window.location.href = 'cart.html';
         });
@@ -105,6 +105,6 @@ function removeFromCart(productId) {
         title: 'Eliminado',
         text: `${product.name} ha sido eliminado del carrito.`,
         showConfirmButton: false,
-        timer: 1500
+        timer: 800
     });
 }

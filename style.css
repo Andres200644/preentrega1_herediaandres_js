@@ -23,6 +23,10 @@ body {
     float: left;
     
   }
+  .h2 {
+   text-align: left; 
+   justify-content: left
+  }
   
   .navbar a {
     color: #ffffff; 
@@ -86,5 +90,3 @@ button:hover {
 .product-card:hover {
     background-color:transparent;
 }
-
-
