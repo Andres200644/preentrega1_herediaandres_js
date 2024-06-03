@@ -1,9 +1,10 @@
+
 const products = [
     { id: 1, name: 'iPhone 15 Pro', price: 999, img: "./images/iphone 15 pro.png" },
     { id: 2, name: 'iPhone 15', price: 799, img: "./images/iphone 15.png" },
     { id: 3, name: 'iPhone 14', price: 699, img: "./images/iphone 14.png" },
     { id: 4, name: 'iPhone 13', price: 599, img: "./images/iphone 13.png" },
-    { id: 5, name: 'HomePod', price: 300, img: "./images/home pod.jpeg " },
+    { id: 5, name: 'Iphone SE', price: 450, img: "./images/iphone se.jpeg " },
     { id: 6, name: 'Airpods max', price: 549, img: "./images/Airpods Max.jpeg" },
     { id: 7, name: 'Airpods pro 2', price: 250, img: "./images/Airpods pro 2.jpeg" },
     { id: 8, name: 'Airpods 3', price: 169, img: "./images/Airpods 3.jpeg" },
@@ -107,4 +108,3 @@ function removeFromCart(productId) {
         timer: 1500
     });
 }
-
