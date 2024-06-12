@@ -57,7 +57,7 @@ function displayProducts(productsToDisplay) {
 
 function searchProducts(event) {
     const query = event.target.value.toLowerCase();
-    const filteredProducts = products.filter(product => 
+    const filteredProducts = products.filter(product =>
         product.name.toLowerCase().includes(query)
     );
     displayProducts(filteredProducts);
@@ -67,7 +67,7 @@ function filterProducts(event) {
     const filterValue = event.target.value;
     let filteredProducts = [...products];
     if (filterValue) {
-        filteredProducts = products.filter(product => 
+        filteredProducts = products.filter(product =>
             product.price <= parseFloat(filterValue)
         );
     }
@@ -149,8 +149,7 @@ function checkout() {
     viewCart();
     Swal.fire({
         icon: 'success',
-        title: 'Compra realizada',
-        text: 'Gracias por su compra!',
+        title: 'Gracias por su compra!',
         text: 'Su pedido llegara pronto!',
         showConfirmButton: true
     }).then(() => {
