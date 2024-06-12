@@ -1,24 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
+    <title>Carrito - Nova Tech</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrito de Compras</title>
-    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <main>
-        <div class="navbar">
-          <img src="./images/logo.jpeg" id="logo">   
-          <nav>
-              <a href="./index.html">Inicio</a>
-              <a href="./cart.html">Carrito</a>
-              <nav class="navbar bg-body-tertiary fixed-top">
-              </nav>
-      </div>
-    <h1>Tus productos en el carrito</h1>
-    <div class="cart-container" id="cart-container"></div>
-   
+        <header class="navbar">
+            <img src="./images/logo.jpeg" id="logo">
+            <nav>
+                <a href="./index.html">Inicio</a>
+                <a href="./cart.html">Carrito</a>
+            </nav>
+        </header>
+        <section>
+            <h1>Tu Carrito</h1>
+            <div class="cart-container" id="cart-container"></div>
+            <div id="cart-total"></div>
+            <button id="checkout-btn">Finalizar Compra</button>
+            <button id="back-to-products">Volver a Productos</button>
+        </section>
+    </main>
     <script src="script.js"></script>
 </body>
 </html>

@@ -1,28 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Nova Tech
-    </title>
+    <title>Nova Tech</title>
     <link rel="stylesheet" href="./style.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-  <main>
-    <div class="navbar">
-      <img src="./images/logo.jpeg" id="logo">   
-      <nav>
-          <a href="./index.html">Inicio</a>
-          <a href="./cart.html">Carrito</a>
-          <nav class="navbar bg-body-tertiary fixed-top">
-          </nav>
-  </div>
-  <div>
-    <h1>Explora nuestros productos</h1>
-    <div class="product-container" id="product-container"></div>
-
+    <main>
+        <header class="navbar">
+            <img src="./images/logo.jpeg" id="logo">
+            <nav>
+                <a href="./index.html">Inicio</a>
+                <a href="./cart.html">Carrito</a>
+            </nav>
+        </header>
+        <section>
+            <h1>Explora nuestros productos</h1>
+            <input type="text" id="search-input" placeholder="Buscar productos...">
+            <select id="filter-select">
+                <option value="">Filtrar por precio</option>
+                <option value="500">Menos de $500</option>
+                <option value="800">Menos de $800</option>
+                <option value="1000">Menos de $1000</option>
+            </select>
+            <div class="product-container" id="product-container"></div>
+        </section>
+    </main>
     <script src="script.js"></script>
-
 </body>
-
 </html>
