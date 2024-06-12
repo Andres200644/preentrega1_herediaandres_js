@@ -137,7 +137,7 @@ function checkout() {
     if (cart.length === 0) {
         Swal.fire({
             icon: 'warning',
-            title: 'Carrito vacío',
+            title: 'Carrito vacio',
             text: 'No hay productos en el carrito para finalizar la compra.',
             showConfirmButton: true
         });
@@ -151,6 +151,7 @@ function checkout() {
         icon: 'success',
         title: 'Compra realizada',
         text: 'Gracias por su compra!',
+        text: 'Su pedido llegara pronto!',
         showConfirmButton: true
     }).then(() => {
         window.location.href = 'index.html';
