@@ -100,7 +100,7 @@ function viewCart() {
     cart = JSON.parse(localStorage.getItem('cart')) || [];
 
     if (cart.length === 0) {
-        cartContainer.innerHTML = '<p>No hay nada en el carrito.</p>';
+        cartContainer.innerHTML = '<p>El carrito esta vacio.</p>';
         cartTotal.innerHTML = '';
         return;
     }
