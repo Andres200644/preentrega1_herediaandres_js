@@ -10,8 +10,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #003566;
-    padding: 10px 20px;
+    background-color: #1c6861;
+    padding: 20px 30px;
     padding: 2% 6%;
 }
 
@@ -30,7 +30,7 @@ body {
     text-decoration: none;
     margin-right: 20px;
     height: 20px;
-    text-align: left;
+    text-align: center;
 }
 
 .navbar a:hover {
@@ -71,7 +71,7 @@ body {
 }
 
 button {
-    background-color: #009999;
+    background-color: #1956b3;
     color: #fff;
     border: none;
     padding: 15px;
@@ -81,11 +81,7 @@ button {
 }
 
 button:hover {
-    background-color: #1c8021;
-}
-
-.product-card:hover {
-    background-color: transparent;
+    background-color: #003c5f;
 }
 
 #product-container, #cart-container {
@@ -96,7 +92,7 @@ button:hover {
 }
 
 .product-card, .cart-item {
-    background-color: #fff;
+    background-color: #ffffff;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     overflow: hidden;
