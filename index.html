@@ -14,17 +14,21 @@
                 <a href="./index.html">Inicio</a>
                 <a href="./cart.html">Carrito</a>
             </nav>
+            <div>
+                <input type="text" id="search-input" placeholder="Buscar productos...">
+            </div>
         </header>
         <section>
-            <h1>Explora nuestros productos</h1>
-            <input type="text" id="search-input" placeholder="Buscar productos...">
-            <select id="filter-select">
-                <option value="">Filtrar por precio</option>
-                <option value="280">Menos de $250</option>
-                <option value="500">Menos de $500</option>
-                <option value="800">Menos de $800</option>
-                <option value="1000">Menos de $1000</option>
-            </select>
+            <h1>Explora nuestros productos</h1> 
+            <div>
+                <select id="filter-select">
+                    <option value="">Filtrar por precio</option>
+                    <option value="280">Menos de $250</option>
+                    <option value="500">Menos de $500</option>
+                    <option value="800">Menos de $800</option>
+                    <option value="1000">Menos de $1000</option>
+                </select>
+            </div>
             <div class="product-container" id="product-container"></div>
         </section>
     </main>

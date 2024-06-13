@@ -11,6 +11,12 @@ const products = [
     { id: 10, name: 'Apple watch series 9', price: 499, img: "./images/wacth 9.jpeg " },
     { id: 11, name: 'Apple Watch ultra 2', price: 800, img: "./images/wacth ultra 2.jpeg " },
     { id: 12, name: 'Apple Watch se', price: 250, img: "./images/watch se.jpeg " },
+    { id: 13, name: 'Samsung s24 ULTRA', price: 909, img: "./images/samsung.jpg " },
+    { id: 14, name: 'Samsung s23 ULTRA', price: 800, img: "./images/samsung s23 ULTRA.jpg" },
+    { id: 15, name: 'Samsung s23 FE', price: 699, img: "./images/Samsung s23 FE.jpg" },
+    { id: 16, name: 'Beats Studio Buds', price: 169, img: "./images/beats.jpg " },
+    { id: 17, name: 'Samsung s23 ULTRA', price: 800, img: "./images/samsung s23 ULTRA.jpg" },
+    { id: 18, name: 'Samsung s23 FE', price: 699, img: "./images/Samsung s23 FE.jpg" },
 ];
 
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
