@@ -15,8 +15,8 @@ const products = [
     { id: 14, name: 'Samsung s23 ULTRA', price: 800, img: "./images/samsung s23 ULTRA.jpg" },
     { id: 15, name: 'Samsung s23 FE', price: 699, img: "./images/Samsung s23 FE.jpg" },
     { id: 16, name: 'Beats Studio Buds', price: 169, img: "./images/beats.jpg " },
-    { id: 17, name: 'Samsung s23 ULTRA', price: 800, img: "./images/samsung s23 ULTRA.jpg" },
-    { id: 18, name: 'Samsung s23 FE', price: 699, img: "./images/Samsung s23 FE.jpg" },
+    { id: 17, name: 'Sony Noise-Canceling', price: 329, img: "./images/sony.jpg" },
+    { id: 18, name: 'Sony - Pulse', price: 199, img: "./images/sony - p.jpg" },
 ];
 
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
